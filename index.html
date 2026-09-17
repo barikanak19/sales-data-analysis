@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear N Bari</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .page {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* First Page */
+        #page1 {
+            flex-direction: column;
+            background: #ffffff;
+        }
+
+        #page1 h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 25px;
+        }
+
+        .click-btn {
+            border: none;
+            background: #111;
+            color: white;
+            padding: 14px 30px;
+            font-size: 17px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .click-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Second Page */
+        #page2 {
+            display: none;
+            background: #ffffff;
+            flex-direction: column;
+        }
+
+        .goat {
+            font-size: 150px;
+            line-height: 1;
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            #page1 h1 {
+                font-size: 24px;
+            }
+
+            .click-btn {
+                font-size: 16px;
+                padding: 13px 28px;
+            }
+
+            .goat {
+                font-size: 130px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1 -->
+    <div class="page" id="page1">
+        <h1>dear N Bari</h1>
+
+        <button class="click-btn" onclick="openPage()">
+            Click Here
+        </button>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page" id="page2">
+        <div class="goat">🐐</div>
+    </div>
+
+    <script>
+        function openPage() {
+            document.getElementById("page1").style.display = "none";
+            document.getElementById("page2").style.display = "flex";
+        }
+    </script>
+
+</body>
+</html>
